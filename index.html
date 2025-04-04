@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sentiment Monitoring Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Multichannel Sentiment Monitoring Dashboard</h1>
+        <form id="feedback-form">
+            <input type="text" id="inputText" placeholder="Enter your feedback here" required>
+            <button type="submit">Submit Feedback</button>
+        </form>
+
+        <!-- New Input for Subreddit -->
+        <div id="fetch-reddit-section">
+            <h2>Fetch Comments from Subreddit</h2>
+            <input type="text" id="subreddit-name" placeholder="Enter Subreddit Name" required>
+            <button id="fetch-reddit-comments">Fetch Comments</button>
+            <div id="reddit-comments-list"></div>
+        </div>
+
+        <div id="predicted-sentiment" class="hidden"></div>
+        <div id="feedback-list">
+            <h2>Feedback</h2>
+            <ul id="feedbackUl"></ul>
+        </div>
+
+        <div id="sentiment-chart">
+            <h2>Sentiment Distribution</h2>
+            <canvas id="myChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
